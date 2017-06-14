@@ -2,8 +2,38 @@
 
     jQuery(document).ready(function () {
 
+        $("#cal-day").on("click", function () {
+            $('#main-calendar').fullCalendar('changeView', 'agendaDay');
+        });
+
+        $("#cal-month").on("click", function () {
+            $('#main-calendar').fullCalendar('changeView', 'month');
+        });
+
+        $("#cal-year").on("click", function () {
+            $('#main-calendar').fullCalendar('changeView', 'listYear');
+        });
+
+        $("#cal-prev").on("click", function () {
+            $('#main-calendar').fullCalendar('prev');
+        });
+
+        $("#cal-next").on("click", function () {
+            $('#main-calendar').fullCalendar('next');
+        });
+
+        $("#cal-today").on("click", function () {
+            $('#main-calendar').fullCalendar('today');
+        });
+
+        $("#cal-month").focus();
+
         var mmt = new moment();
-        $("#main-content").height($("#secondary-content").height());
+
+        setTimeout(function () {
+            $("#main-content").height($("#secondary-content").height());
+        }, 500);
+
 
         $(".checklist-intro p").text(mmt.format("dddd"));
         $(".checklist-intro span").text(mmt.format("D MMMM"));
@@ -28,14 +58,10 @@
             // customIcons: 'img/icons/weather/',
             success: function() {
 
-                console.log("here in success");
-
                 $("#main-content").height($("#secondary-content").height());
-
-                // $('.weather-wrapper').removeClass("hide");
             },
             error: function() {
-                console.log("These aren't the droids you're looking for.");
+                console.error("There was a problem getting the weather report.");
             }
         });
 
@@ -59,67 +85,18 @@
 
                 $("#calendar-output").text(date.format("MMMM YYYY"))
 
-                // $(".fc-day").css('background-color', 'white');
-                //
-                // // change the day's background color just for fun
-                // $(this).css('background-color', 'red');
+                $(".checklist-intro p").text(date.format("dddd"));
+                $(".checklist-intro span").text(date.format("D MMMM"));
+
+                // $('#main-calendar').fullCalendar( 'gotoDate', date );
+
+                $(".fc-day").css('background-color', 'white');
+                // change the day's background color just for fun
+                $(this).css('background-color', '#fffde7');
 
             },
             events: [
-                // {
-                //     title: 'All Day Event',
-                //     start: '2017-05-01'
-                // },
-                // {
-                //     title: 'Long Event',
-                //     start: '2017-05-07',
-                //     end: '2017-05-10'
-                // },
-                // {
-                //     id: 999,
-                //     title: 'Repeating Event',
-                //     start: '2017-05-09T16:00:00'
-                // },
-                // {
-                //     id: 999,
-                //     title: 'Repeating Event',
-                //     start: '2017-05-16T16:00:00'
-                // },
-                // {
-                //     title: 'Conference',
-                //     start: '2017-05-11',
-                //     end: '2017-05-13'
-                // },
-                // {
-                //     title: 'Meeting',
-                //     start: '2017-05-12T10:30:00',
-                //     end: '2017-05-12T12:30:00'
-                // },
-                // {
-                //     title: 'Lunch',
-                //     start: '2017-05-12T12:00:00'
-                // },
-                // {
-                //     title: 'Meeting',
-                //     start: '2017-05-12T14:30:00'
-                // },
-                // {
-                //     title: 'Happy Hour',
-                //     start: '2017-05-12T17:30:00'
-                // },
-                // {
-                //     title: 'Dinner',
-                //     start: '2017-05-12T20:00:00'
-                // },
-                // {
-                //     title: 'Birthday Party',
-                //     start: '2017-05-13T07:00:00'
-                // },
-                // {
-                //     title: 'Click for Google',
-                //     url: 'http://google.com/',
-                //     start: '2017-05-28'
-                // }
+
             ]
         });
     });
