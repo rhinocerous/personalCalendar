@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Aaron Gibson - Personal Calendar Demo</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <link href="css/fullcalendar.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/fullcalendar.print.min.css" type="text/css" rel="stylesheet" media="print"/>
+
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Aaron <span>Gibson</span></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#personalCalendar">Calendar</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="#personalCalendar">Calendar</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div id="index-banner" class="parallax-container">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12" id="personalCalendar">
+                <div class="card grey lighten-3">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col m10 valign-wrapper" id="calendarHeader">
+
+                                <a class="btn-floating btn-small red btn-spacer"></a>
+                                <a class="btn-floating btn-small orange btn-spacer"></a>
+                                <a class="btn-floating btn-small green"></a>
+
+                                <h5 class="grey-text text-darken-2">Personal Calendar</h5>
+                            </div>
+
+                            <div class="col m2 s6 offset-s6 valign-wrapper">
+                                <div class="avatar-photo ">
+                                    <img src="img/rhino-logo.png" class="circle responsive-img z-depth-1"
+                                         alt="Aaron Gibson presents: rhinocero.us"/>
+                                </div>
+
+                                <span>Aaron Gibson</span>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col m4 s12 light-blue darken-1" id="secondary-content">
+
+
+                                <p class="center-align">
+
+                                    <i class="material-icons">weather-partlycloudy</i>
+                                </p>
+                                <h3 class="temperature center-align">5&deg;C</h3>
+                                <p class="weather center-align">Clouds & Sunshine</p>
+
+                                <ul id="checklist-main" class="collection">
+                                    <li class="checklist-intro collection-item">
+                                        <span>17 January</span><br/>
+                                        Saturday
+                                    </li>
+
+                                    <li class="checklist-item collection-item">
+                                        <span class="undone">15:00</span>
+                                        Design Personal Calendar
+                                    </li>
+
+                                    <li class="checklist-item collection-item">
+                                        <span class="postponed">18:00</span>
+                                        Take Volvo for a ride
+                                    </li>
+
+                                    <li class="checklist-item collection-item">
+                                        <span class="pending">20:00</span>
+                                        Look for a job
+                                    </li>
+
+                                    <li class="checklist-item collection-item">
+                                        <span class="completed">22:15</span>
+                                        Take dog for a walk
+                                    </li>
+
+                                    <li class="checklist-more collection-item">
+                                        <a href="">Show more (4)</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="col m8 s12" id="main-content">
+
+                                <div class="row grey lighten-1" id="calendar-header">
+                                    <div class="valign-wrapper">
+                                        <div class="col m6">
+                                            <h4 class="center-align">January 2017</h4>
+                                        </div>
+
+                                        <div class="col m6">
+                                            <a class="btn btn-flat right-align" href="#personalCalendar">Day</a>
+                                            <a class="btn btn-flat right-align" href="#about">Month</a>
+                                            <a class="btn btn-flat right-align" href="#download">Year</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col m12">
+                                        <div id="main-calendar"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col m12" style="border-bottom: 2px solid #e0e0e0;">
+
+                                    </div>
+                                </div>
+
+                                <div class="row valign-wrapper" id="checklist-summary">
+
+                                    <div class="col m2 summary-item completed">
+                                        <span>Completed</span><br/>
+                                        <p>48</p>
+                                    </div>
+
+                                    <div class="col m2 summary-item postpone">
+                                        <span>Postponed</span><br/>
+                                        <p>12</p>
+                                    </div>
+
+                                    <div class="col m2 summary-item undone">
+                                        <span>Undone</span><br/>
+                                        <p>6</p>
+                                    </div>
+
+                                    <div class="col m2 summary-item pending">
+                                        <span>All Tasks</span>
+                                        <p>66</p>
+                                    </div>
+
+                                    <div class="col m4 ">
+                                        <div class="right-align">
+                                            <a class="btn-floating waves-effect waves-light blue">
+                                                <i class="material-icons">add</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="img/20161211_144051.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+<div class="container">
+    <div class="section" id="about">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Contact Us</h4>
+                <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque
+                    id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut
+                    ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem
+                    neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu
+                    mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum
+                    ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
+</div>
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Settings</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src='js/vendor/moment.min.js'></script>
+<script src='js/vendor/fullcalendar.min.js'></script>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

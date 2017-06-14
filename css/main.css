@@ -1,0 +1,146 @@
+/* Custom Stylesheet */
+
+/*
+    project section
+*/
+
+#main-calendar
+{
+
+}
+
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-list-heading td,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-row,
+.fc-unthemed tbody,
+.fc-unthemed td,
+.fc-unthemed th,
+.fc-unthemed thead {
+    border-color: #fff;
+}
+
+.fc td, .fc th{
+    padding: 10px 5px !important;
+}
+
+#main-content{
+    background-color: #ffffff;
+}
+
+#secondary-content{
+    min-height: 100vh;
+}
+
+.avatar-wrapper{
+    float:right;
+}
+
+.avatar-wrapper span{
+
+
+}
+
+.avatar-photo{
+    width:50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.avatar-photo img{
+    background-color: #FFF;
+}
+
+#calendarHeader{
+
+}
+
+#calendarHeader ul{
+    list-style: none;
+}
+
+#calendarHeader ul li{
+    float:left;
+}
+
+#calendarHeader h5{
+    display:inline-block;
+    margin-left:20px;
+}
+
+.btn-spacer{
+    margin-right:8px;
+}
+.btn-small {
+    height: 16px;
+    line-height: 16px;
+    width:12px;
+    padding: 0 0.5rem;
+}
+
+#personalCalendar{
+    margin-top:50px;
+}
+.brand-logo span{
+    color: #26a69a;
+}
+/**
+    parallax theme below
+ */
+
+nav ul a,
+nav .brand-logo {
+    color: #444;
+}
+
+p {
+    line-height: 2rem;
+}
+
+.button-collapse {
+    color: #26a69a;
+}
+
+.parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(0,0,0, .9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+footer.page-footer {
+    margin: 0;
+}
+
+
