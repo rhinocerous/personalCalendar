@@ -4,9 +4,76 @@
     project section
 */
 
+#checklist-main{
+    background-color: transparent;
+    margin-top:50px;
+}
+
+#checklist-main li.checklist-intro{
+    margin-bottom: 30px;
+    padding-left:45px;
+}
+
+#checklist-main li.checklist-intro p{
+    font-size:200%;
+    padding-top: 15px;
+    display:inline-block;
+}
+
+#checklist-main li.checklist-intro span{
+
+}
+
+#checklist-main li span{
+    padding:5px;
+    border-radius: 5px;
+}
+
+#checklist-main li{
+    min-height: 30px;
+    margin:15px 0;
+}
+
+#checklist-main li p{
+    margin-left:5px;
+    display:inline;
+}
+
+.summary-item{
+margin-top:40px;
+}
+
+.summary-item p{
+    font-size:250%;
+    padding-top:20px;
+}
+.summary-item.completed{
+    /*color:teal;*/
+}
+
+.summary-item.undone{
+    /*color:red;*/
+}
+
+.summary-item.postponed{
+    /*color:orange;*/
+}
+
+.summary-item.total{
+    /*color:grey;*/
+}
+
+
 #main-calendar
 {
 
+}
+
+.weather-icon{
+    width:100%;
+}
+.weather-temperature{
+    margin-top:0px;
 }
 
 .fc-unthemed .fc-content,
@@ -28,10 +95,17 @@
 
 #main-content{
     background-color: #ffffff;
+    height: 100vh;
 }
 
 #secondary-content{
+    color:white;
     min-height: 100vh;
+    background: indigo; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right top, #524CA0, #4964C1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom left, #524CA0, #4964C1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom left, #524CA0, #4964C1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom left, #524CA0, #4964C1); /* Standard syntax */
 }
 
 .avatar-wrapper{

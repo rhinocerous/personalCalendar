@@ -19,18 +19,6 @@
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">Aaron <span>Gibson</span></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#personalCalendar">Calendar</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#download">Download</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="#personalCalendar">Calendar</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#download">Download</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
@@ -64,42 +52,43 @@
                         <div class="row">
                             <div class="col m4 s12 light-blue darken-1" id="secondary-content">
 
+                                <img src="" class="weather-icon" alt="Weather Icon" />
 
-                                <p class="center-align">
+                                <h3 class="center-align weather-temperature">...</h3>
+                                <p class="weather center-align weather-description capitalize">Loading</p>
 
-                                    <i class="material-icons">weather-partlycloudy</i>
-                                </p>
-                                <h3 class="temperature center-align">5&deg;C</h3>
-                                <p class="weather center-align">Clouds & Sunshine</p>
-
-                                <ul id="checklist-main" class="collection">
-                                    <li class="checklist-intro collection-item">
+                                <ul id="checklist-main" class="">
+                                    <li class="checklist-intro">
                                         <span>17 January</span><br/>
-                                        Saturday
+                                        <p>Saturday</p>
                                     </li>
 
-                                    <li class="checklist-item collection-item">
-                                        <span class="undone">15:00</span>
-                                        Design Personal Calendar
+                                    <li class="checklist-item ">
+                                        <span class="undone red lighten-2">15:00</span>
+                                        <p>Design Personal Calendar</p>
                                     </li>
 
-                                    <li class="checklist-item collection-item">
-                                        <span class="postponed">18:00</span>
-                                        Take Volvo for a ride
+                                    <li class="checklist-item">
+                                        <span class="postponed orange lighten-2">18:00</span>
+                                        <p>Take Volvo for a ride</p>
                                     </li>
 
-                                    <li class="checklist-item collection-item">
-                                        <span class="pending">20:00</span>
-                                        Look for a job
+                                    <li class="checklist-item">
+                                        <span class="pending grey">20:00</span>
+                                        <p>Look for a job</p>
                                     </li>
 
-                                    <li class="checklist-item collection-item">
-                                        <span class="completed">22:15</span>
-                                        Take dog for a walk
+                                    <li class="checklist-item">
+                                        <span class="completed teal lighten-2">22:15</span>
+                                        <p>Take dog for a walk</p>
                                     </li>
 
                                     <li class="checklist-more collection-item">
-                                        <a href="">Show more (4)</a>
+
+                                            <a class="btn-floating waves-effect waves-light blue">
+                                                <i class="material-icons">expand_more</i>
+                                            </a>
+
                                     </li>
 
                                 </ul>
@@ -111,7 +100,7 @@
                                 <div class="row grey lighten-1" id="calendar-header">
                                     <div class="valign-wrapper">
                                         <div class="col m6">
-                                            <h4 class="center-align">January 2017</h4>
+                                            <h4 class="center-align" id="calendar-output">January 2017</h4>
                                         </div>
 
                                         <div class="col m6">
@@ -125,39 +114,33 @@
                                 <div class="row">
                                     <div class="col m12">
                                         <div id="main-calendar"></div>
+                                        <hr/>
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row" id="checklist-summary">
 
-                                    <div class="col m12" style="border-bottom: 2px solid #e0e0e0;">
-
-                                    </div>
-                                </div>
-
-                                <div class="row valign-wrapper" id="checklist-summary">
-
-                                    <div class="col m2 summary-item completed">
+                                    <div class="col m2 s6 summary-item  completed teal-text text-lighten-2">
                                         <span>Completed</span><br/>
                                         <p>48</p>
                                     </div>
 
-                                    <div class="col m2 summary-item postpone">
+                                    <div class="col m2 s6 summary-item postponed orange-text text-lighten-2">
                                         <span>Postponed</span><br/>
                                         <p>12</p>
                                     </div>
 
-                                    <div class="col m2 summary-item undone">
+                                    <div class="col m2 s6 summary-item undone red-text text-lighten-2">
                                         <span>Undone</span><br/>
                                         <p>6</p>
                                     </div>
 
-                                    <div class="col m2 summary-item pending">
+                                    <div class="col m2 s6 summary-item total grey-text">
                                         <span>All Tasks</span>
                                         <p>66</p>
                                     </div>
 
-                                    <div class="col m4 ">
+                                    <div class="col m4 s12 summary-item">
                                         <div class="right-align">
                                             <a class="btn-floating waves-effect waves-light blue">
                                                 <i class="material-icons">add</i>
@@ -253,6 +236,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script src='js/vendor/moment.min.js'></script>
 <script src='js/vendor/fullcalendar.min.js'></script>
+<script src="js/vendor/openWeather.js"></script>
+
 
 
 <script src="js/main.js"></script>
